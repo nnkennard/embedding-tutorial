@@ -40,39 +40,36 @@ def get_word_lists(word_list_dir):
     for cat_map in obj:
       vocab.update(cat_map["words"])
 
-  return list(sorted(vocab))
+  prefix_map = collections.defaultdict(list)
+  for word in vocab:
+    prefix_map[word[:2].lower()].append(word.lower())
 
+  return prefix_map
 
 def main():
 
   args = parser.parse_args()
-  words = get_word_lists(args.word_list_dir)
+  prefix_map = get_word_lists(args.word_list_dir)
+
+  ngram_counter = collections.defaultdict(
+  lambda: collections.defaultdict(lambda: collections.Counter()))
 
   for fname, url, records in tqdm.tqdm(readline_google_store(ngram_len=5)):
     identifier = fname.split(".")[0].split("-")[-1]
-    if not identifier.startswith(args.identifier_prefix):
+    if identifier not in prefix_map:
+      continue
+    elif not identifier.startswith(args.identifier_prefix):
       continue
     else:
-      # Check if the file is already created
-      current_files = [
-          x.split("/")[-1] for x in glob.glob(f"{args.output_dir}/*")
-      ]
-      if (f"ngram_results-{identifier}.json" in current_files or
-          f"ngram_results-{identifier}.json.gz") in current_files:
-        print(f"Skipping {identifier}")
-        continue
-
-      ngram_counter = collections.defaultdict(
-          lambda: collections.defaultdict(lambda: collections.Counter()))
       for j in tqdm.tqdm(records):
         l1, l2, w, r2, r1 = j.ngram.lower().split()
-        if w not in words:
+        if w not in prefix_map[identifier]:
           continue
         else:
           for c_word in [l1, l2, r1, r2]:
             ngram_counter[j.year][w][c_word] += j.match_count
 
-      with open(f"{args.output_dir}/ngram_results-{identifier}.json", "w") as f:
+      with open(f"{args.output_dir}/ngram_results-{args.identifier_prefix}.json", "w") as f:
         json.dump(ngram_counter, f)
 
 
