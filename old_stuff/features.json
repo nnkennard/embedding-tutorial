@@ -1,0 +1,223 @@
+[
+  {
+    "dimension": "age",
+    "positives": [
+      "old",
+      "ancient",
+      "elderly"
+    ],
+    "negatives": [
+      "young",
+      "youth",
+      "child"
+    ]
+  },
+  {
+    "dimension": "arousal",
+    "positives": [
+      "interesting",
+      "exciting",
+      "fun"
+    ],
+    "negatives": [
+      "boring",
+      "unexciting",
+      "dull"
+    ]
+  },
+  {
+    "dimension": "cost",
+    "positives": [
+      "expensive",
+      "costly",
+      "fancy"
+    ],
+    "negatives": [
+      "inexpensive",
+      "cheap",
+      "budget"
+    ]
+  },
+  {
+    "dimension": "danger",
+    "positives": [
+      "dangerous",
+      "deadly",
+      "threatening"
+    ],
+    "negatives": [
+      "safe",
+      "harmless",
+      "calm"
+    ]
+  },
+  {
+    "dimension": "gender",
+    "positives": [
+      "male",
+      "masculine",
+      "man"
+    ],
+    "negatives": [
+      "female",
+      "feminine",
+      "woman"
+    ]
+  },
+  {
+    "dimension": "intelligence",
+    "positives": [
+      "intelligent",
+      "smart",
+      "wise"
+    ],
+    "negatives": [
+      "stupid",
+      "dumb",
+      "idiotic"
+    ]
+  },
+  {
+    "dimension": "location",
+    "positives": [
+      "indoor",
+      "indoors",
+      "inside"
+    ],
+    "negatives": [
+      "outdoor",
+      "outdoors",
+      "outside"
+    ]
+  },
+  {
+    "dimension": "loudness",
+    "positives": [
+      "loud",
+      "deafening",
+      "noisy"
+    ],
+    "negatives": [
+      "soft",
+      "silent",
+      "quiet"
+    ]
+  },
+  {
+    "dimension": "political",
+    "positives": [
+      "democrat",
+      "liberal",
+      "progressive"
+    ],
+    "negatives": [
+      "republican",
+      "conservative",
+      "redneck"
+    ]
+  },
+  {
+    "dimension": "religiosity",
+    "positives": [
+      "religious",
+      "spiritual",
+      "orthodox"
+    ],
+    "negatives": [
+      "atheist",
+      "secular",
+      "agnostic"
+    ]
+  },
+  {
+    "dimension": "size",
+    "positives": [
+      "large",
+      "big",
+      "huge"
+    ],
+    "negatives": [
+      "small",
+      "little",
+      "tiny"
+    ]
+  },
+  {
+    "dimension": "speed",
+    "positives": [
+      "fast",
+      "speedy",
+      "quick"
+    ],
+    "negatives": [
+      "slow",
+      "sluggish",
+      "gradual"
+    ]
+  },
+  {
+    "dimension": "temperature",
+    "positives": [
+      "hot",
+      "warm",
+      "tropical"
+    ],
+    "negatives": [
+      "cold",
+      "cool",
+      "frigid"
+    ]
+  },
+  {
+    "dimension": "valence",
+    "positives": [
+      "good",
+      "great",
+      "happy"
+    ],
+    "negatives": [
+      "bad",
+      "awful",
+      "sad"
+    ]
+  },
+  {
+    "dimension": "wealth",
+    "positives": [
+      "rich",
+      "wealthy",
+      "privileged"
+    ],
+    "negatives": [
+      "poor",
+      "poverty",
+      "underprivileged"
+    ]
+  },
+  {
+    "dimension": "weight",
+    "positives": [
+      "heavy",
+      "fat",
+      "thick"
+    ],
+    "negatives": [
+      "light",
+      "skinny",
+      "thin"
+    ]
+  },
+  {
+    "dimension": "wetness",
+    "positives": [
+      "wet",
+      "water",
+      "ocean"
+    ],
+    "negatives": [
+      "dry",
+      "country",
+      "land"
+    ]
+  }
+]
