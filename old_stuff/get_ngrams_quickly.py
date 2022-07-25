@@ -69,7 +69,7 @@ def main():
           for c_word in [l1, l2, r1, r2]:
             ngram_counter[j.year][w][c_word] += j.match_count
 
-      with open(f"{args.output_dir}/ngram_results-{args.identifier_prefix}.json", "w") as f:
+      with open(f"{args.output_dir}/ngram_results-{identifier}.json", "w") as f:
         json.dump(ngram_counter, f)
 
 
